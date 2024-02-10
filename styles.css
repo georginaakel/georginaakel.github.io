@@ -1,0 +1,63 @@
+/* Fondo de la app */
+body {
+  background-color: rgb(242, 153, 167);
+  margin: 20px 20px 20px 20px;
+  padding: 30px 30px 30px 30px;
+  box-sizing: border-box;
+} 
+
+h1 {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(208, 3, 3);
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 20px;
+  margin: 20px;
+  padding: 0;
+}
+
+.Infomacion-jugador {
+    background-color: rgb(208, 3, 3);
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+/* Estilos para el cartón de bingo */
+.bingo-board table {
+    border-collapse: collapse;
+    margin: 20px auto; /* Márgenes centralizados */
+}
+
+.bingo-board td {
+    border: 1px solid black; /* Borde para cada celda */
+    width: 50px; /* Ancho de los recuadros */
+    height: 50px; /* Alto de los recuadros */
+    text-align: center;
+    font-size: 24px; /* Tamaño de la fuente */
+}
+
+.bingo-board table {
+    border: 2px solid black; /* Borde para la tabla */
+}
+
+.bingo-board table tr:last-child td {
+    border-bottom: none; /* Elimina el borde inferior de la última fila */
+}
+
+.bingo-board table td:last-child {
+    border-right: none; /* Elimina el borde derecho de la última columna */
+}
+
