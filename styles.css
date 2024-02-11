@@ -5,6 +5,8 @@ body {
   padding: 30px 30px 30px 30px;
   box-sizing: border-box;
   flex-wrap: wrap;
+  align-items: center;
+
 } 
 
 #bingo-board {
@@ -168,6 +170,11 @@ input {
     font-size: 16px;
     cursor: pointer;
 }
+#parte-de-abajo{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
 
 button {
   display: flex;
@@ -201,6 +208,19 @@ label {
   padding: 0;
 }
 
+.fin-juego {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente los botones */
+  align-items: center;
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+.fin-juego button {
+  margin: 0 10px; /* Ajusta el margen entre los botones según sea necesario */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
 /* Tamaño de los numeros generados al azar */
 td {
@@ -245,3 +265,4 @@ th {
     width: 33.33%;
   }
 }
+

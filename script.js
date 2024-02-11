@@ -312,6 +312,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Agregar un event listener al botón para llamar a la función generarNumero cuando se haga clic
     botonGenerar.addEventListener("click", generarNumero);
+    
+    const btnTerminarPartida = document.getElementById('terminar-partida');
 
+    btnTerminarPartida.addEventListener('click', function() {
+        reiniciarPartida();
+    });
+
+    function reiniciarPartida() {
+        // Eliminar los cartones de los jugadores del DOM
+        for (const jugador in cartones) {
+            const divJugador = document.getElementById(jugador);
+            divJugador.innerHTML = ''; // Eliminar contenido
+        }
+    
+        // Limpiar el localStorage si es necesario
+        localStorage.clear();
+    
+        // Guardar el puntaje actual en una variable global
+        // Supongamos que puntajes es un array donde cada índice corresponde al puntaje de un jugador
+        const puntajes = [];
+        jugadores.forEach(function(jugador) {
+            const puntaje = parseInt(localStorage.getItem(jugador + "_puntaje"));
+            puntajes.push(puntaje);
+        });
+    
+        // Hacer cualquier otra operación necesaria
+        // Por ejemplo, mostrar un mensaje de partida terminada
+        alert('Partida Terminada. Puntajes guardados.');
+    
+        // Puedes reiniciar la variable de puntajes si deseas
+        // puntajes.length = 0;
+    }
     
 });
