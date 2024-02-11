@@ -1,63 +1,247 @@
 /* Fondo de la app */
 body {
-  background-color: rgb(242, 153, 167);
-  margin: 20px 20px 20px 20px;
+  background-color: rgb(148, 245, 245);
+  margin: 20px 20px 20px 0px;
   padding: 30px 30px 30px 30px;
   box-sizing: border-box;
+  flex-wrap: wrap;
 } 
+
+#bingo-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: pink;
+  color: rgb(230, 7, 103);
+  margin: 20px;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+#puntajes-jugadores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(230, 7, 103);
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+  margin: 20px;
+  padding: 0;
+  flex-wrap: wrap;
+} 
+
+
+#numero-generado {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(230, 7, 103);
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+  margin: 20px;
+  padding: 0;
+  flex-wrap: wrap ;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+}
 
 h1 {
   text-align: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(208, 3, 3);
   font-size: 50px;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 p {
   text-align: center;
+  font-weight: bold;
+  font-family:Arial, Helvetica, sans-serif;
+  color: purple;
+  font-size: 20px;  
+  margin: 20px;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold ;
+  color: purple;
+  font-size: 20px;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  color: rgb(230, 7, 103);
+
+  background-color: rgb(243, 236, 239);
+  border: 3px solid rgb(230, 7, 103);
+  border-radius: 6px;
+  width: 150px;
+}
+
+#información-de-juego {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Información-jugador,
+.Carton {
+  width: 45%; /* Ajusta el ancho según sea necesario */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centra verticalmente el contenido */
+  margin: 20px; /* Ajusta el margen según sea necesario */
+  height: 300px; /* Altura fija para centrar verticalmente */
+}
+
+.Información-jugador label,
+.Carton label {
+  text-align: center;
+  margin-bottom: 10px; /* Espaciado entre el label y el input */
+}
+
+.Información-jugador input,
+.Carton input {
+  text-align: center;
+  width: 80%; /* Ancho del input, ajusta según sea necesario */
+  margin-bottom: 20px; /* Espaciado entre el input y el botón */
+}
+
+.botones-jugador,
+.botones-carton {
+  margin-top: auto;
+  text-align: center; 
+}
+
+
+#jugadores {
+  text-align: center;
+  align-self: center;
+  flex-wrap: wrap;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(230, 7, 103);
+  background-color: rgb(243, 236, 239);
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+  align-content: center;
+  margin-top: 20px;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+#Generar-numero{
+  text-align: center;
+}
+
+.fin-juego {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    width: 200px; /* ajusta el ancho según sea necesario */
+}
+
+.fin-juego button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 300ms;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(230, 7, 103);
+  color: rgb(243, 236, 239);
+  font-weight: bold ;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px 20px 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+button:hover {
+  background-color: rgb(243, 236, 239);
+  color: rgb(230, 7, 103);
+  border: 1px solid rgb(230, 7, 103);
+}
+
+
+label {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: white;
+  color: rgb(230, 7, 103);
   font-size: 20px;
   margin: 20px;
   padding: 0;
 }
 
-.Infomacion-jugador {
-    background-color: rgb(208, 3, 3);
-    color: white;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 10px 20px 10px 20px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 300ms;
+
+/* Tamaño de los numeros generados al azar */
+td {
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:rgb(230, 7, 103);
+  font-size: 20px;
+  margin: 20px;
+  padding: 0;
 }
 
-/* Estilos para el cartón de bingo */
-.bingo-board table {
-    border-collapse: collapse;
-    margin: 20px auto; /* Márgenes centralizados */
+/* Estilo para las celdas marcadas con 'X' */
+td.marcado {
+  background-color: rgb(230, 7, 103); /* Color de fondo cuando está marcado */
+  color: white; /* Color del texto cuando está marcado */
+  font-weight: bold; /* Texto en negrita cuando está marcado */
 }
 
-.bingo-board td {
-    border: 1px solid black; /* Borde para cada celda */
-    width: 50px; /* Ancho de los recuadros */
-    height: 50px; /* Alto de los recuadros */
-    text-align: center;
-    font-size: 24px; /* Tamaño de la fuente */
+th {
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 20px;
+  margin: 50px;
+  padding: 50px;
 }
 
-.bingo-board table {
-    border: 2px solid black; /* Borde para la tabla */
+@media (min-width: 768px) {
+  /* Estilos para pantallas más grandes (tablets y laptops) */
+  #bingo-board,
+  #puntajes-jugadores,
+  #numero-generado {
+    width: 50%;
+  }
 }
 
-.bingo-board table tr:last-child td {
-    border-bottom: none; /* Elimina el borde inferior de la última fila */
+@media (min-width: 992px) {
+  /* Estilos para pantallas aún más grandes (laptops y pantallas grandes) */
+  #bingo-board,
+  #puntajes-jugadores,
+  #numero-generado {
+    width: 33.33%;
+  }
 }
-
-.bingo-board table td:last-child {
-    border-right: none; /* Elimina el borde derecho de la última columna */
-}
-

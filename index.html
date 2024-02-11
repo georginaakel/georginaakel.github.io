@@ -7,34 +7,54 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <header class = "logo">
+        <h1>Bienvenido a Bingolandia</h1>
+        <img src="./logo bingo.png" alt = "logo-bingo">
+    </header>
+
     <section class = "Intro-juego">
-        <div>
-            <h1>Bienvenido a Bingolandia</h1>
-            <p>Ingresa los nombres de los jugadores y comienza a jugar</p>
-        </div>
+            <p>Este es tu score de las partidas anteriores: </p>
+            <p>Total de victorias acumuladas</p>
+            <div id="puntajes-jugadores"></div>
+            <p>Para comenzar a jugar, por favor ingrese el nombre de los jugadores y de que tamaño deseas el cartón de bingo (3, 4 o 5) </p>
     </section>
 
-    <section class = "Información-jugador">
-            <input type="text" id="nombre-jugador">
-            <button id="agregar-jugador">Agregar Jugador</button>
-            <button id="eliminar-jugador">Eliminar Jugador</button>
-    </section>
+    <div id = "información-de-juego">
+        
+        <section class = "Información-jugador">
+                <label for="nombre-jugador">Inserte el Nombre del jugador: </label>
+                <input type="text" id="nombre-jugador">
+                <div id = "botones-jugador">
+                    <button id="agregar-jugador">Agregar Jugador</button>
+                    <button id="eliminar-jugador">Eliminar Jugador</button>
+                </div>
+        </section>
 
-    <section class = "Carton">
-       <!--<input type="number" id="cantidad-filas-columnas">
-       <button id="crear-carton">Crear Cartón</button>-->
-       <form id="bingo-form">
-        <label for="filas">Número de filas:</label>
-        <input type="number" id="filas" required>
-        <br>
-        <label for="columnas">Número de columnas:</label>
-        <input type="number" id="columnas" required>
-        <br>
-        <button type="submit">Generar Cartón</button>
-    </form>
-    <div id="bingo-board">
-        <!-- Aquí se mostrará el cartón de bingo generado -->
+        <section class = "Carton">
+        <form id="bingo-form">
+            <label for="filasxcolumnas">Inserte el tamaño del cartón: </label>
+            <input type="number" id="filasxcolumnas" required pattern="3|4|5">
+            <div id = "botones-carton">
+                <button type="submit">Generar Cartones</button>
+            </div>
+            <div id="bingo-board"></div>
+        </form>
+        </section>
     </div>
+    
+    <div id="jugadores"></div>
+    
+
+    <section class = "Generar-numero">
+        <p>Generador de Números Aleatorios</p>
+        <button id="generar">Generar Número</button>
+        <p>El número generado es:</p>
+        <div id="numero-generado"></div>
+    </section>
+
+    <section class = "fin-juego">
+        <button id="terminar-partida">Terminar Partida</button>
+        <button id="reiniciar-partida">Reiniciar Partida</button>
     </section>
 
     <script src="./script.js"></script>
